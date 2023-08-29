@@ -13,15 +13,13 @@
 点开链接，下拉到底实现手动翻页并观察顶部url的变化，可以发现有一定的规律。
 
 第一页url：
-![第一页url](https://img-blog.csdnimg.cn/20201226151722595.png)
+![第一页url](https://img-blog.csdnimg.cn/20201226151722595.png)  
 第二页url：
-![第二页url](https://img-blog.csdnimg.cn/20201226151735567.png)
+![第二页url](https://img-blog.csdnimg.cn/20201226151735567.png)  
 第三页url：
-![第三页url](https://img-blog.csdnimg.cn/20201226151753595.png)
-.....
-
+![第三页url](https://img-blog.csdnimg.cn/20201226151753595.png)  
+...  
 因此我们大致可以推断翻页的实现是通过改变(num).html中的数字num实现的。
-
 
 ### 2.代码实现：
 利用简单的for循环实现自动翻页
@@ -29,6 +27,7 @@
 for i in range(1,18,1):
     url="http://news.fzu.edu.cn/html/fdyw/{}.html".format(i)   
 ```
+
 ## 二.时间的限定
 ### 1.遇到的困难：
 来到福大要闻的首页，跳转至第16页（图片内备注错了），发现部分要闻为20年发布，另一些为19年。因此，单纯靠前文提及的for循环是无法实现项目要求的（会有不需要的19年数据被爬下）
